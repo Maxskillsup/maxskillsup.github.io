@@ -3,52 +3,294 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MaxSkillsUP Developer Site</title>
-  <meta name="description" content="Developer website for Skills UP VG app policy and app-ads.txt verification.">
+  <title>Skills UP VG — Learn Languages</title>
+  <meta name="description" content="Skills UP VG: learn Spanish, English, Polish and Ukrainian phrases. Official app website.">
   <meta name="google-site-verification" content="0OUx1v5nVqMkfm2_hwwS4euRGLI4BDjAJ6h-wkYWb0w">
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Skills UP VG">
+  <meta property="og:title" content="Skills UP VG — Learn Languages">
+  <meta property="og:description" content="Learn Spanish, English, Polish and Ukrainian phrases. Free language learning app on Google Play.">
+  <meta property="og:image" content="https://maxskillsup.github.io/og-image.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:url" content="https://maxskillsup.github.io/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Skills UP VG — Learn Languages">
+  <meta name="twitter:description" content="Learn Spanish, English, Polish and Ukrainian phrases. Free language learning app on Google Play.">
+  <meta name="twitter:image" content="https://maxskillsup.github.io/og-image.png">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.5;
-      color: #1f2937;
-      background: #f9fafb;
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --accent: #FFD700;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
     }
-    .card {
-      max-width: 760px;
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .lang-switch {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 16px 20px 0;
+      flex-wrap: wrap;
+    }
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid var(--muted);
+      color: var(--muted);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-switch button:hover { border-color: var(--accent); color: var(--accent); }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #1a1a2e;
+    }
+    main {
+      max-width: 820px;
       margin: 0 auto;
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
+      padding: 24px 20px 60px;
+    }
+    .hero {
+      text-align: center;
+      padding: 30px 0 20px;
+    }
+    .app-icon {
+      font-size: 64px;
+      margin-bottom: 10px;
     }
     h1 {
-      margin-top: 0;
+      font-size: 2rem;
+      margin: 0 0 8px;
+      color: var(--accent);
     }
-    a {
-      color: #2563eb;
+    .tagline {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent);
+      color: #1a1a2e;
+      font-weight: 700;
       text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      transition: transform 0.15s;
     }
-    a:hover {
-      text-decoration: underline;
+    .play-btn:hover { transform: translateY(-2px); }
+    .card {
+      background: var(--card);
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
     }
-    code {
-      background: #f3f4f6;
-      padding: 0.1rem 0.3rem;
-      border-radius: 4px;
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .features .ico { font-size: 1.3rem; flex-shrink: 0; }
+    .langs-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .badge {
+      background: #334155;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--accent); }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>MaxSkillsUP Developer Website</h1>
-    <p>This domain is used for Google Play and AdMob verification.</p>
-    <ul>
-      <li><a href="/app-ads.txt">app-ads.txt</a></li>
-      <li><a href="https://maxskillsup.github.io/Skills-UP-VG-privacy/">Privacy Policy</a></li>
-    </ul>
-    <p>AdMob crawler target: <code>/app-ads.txt</code>.</p>
+  <div class="lang-switch" id="langSwitch">
+    <button data-lang="es">ES</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="pl">PL</button>
+    <button data-lang="uk">UK</button>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="app-icon">🎓</div>
+      <h1>Skills UP VG</h1>
+      <p class="tagline" data-i18n="tagline"></p>
+      <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.maxskillsup.skillsupvg" target="_blank" rel="noopener">
+        <span>▶</span><span data-i18n="getOnPlay"></span>
+      </a>
+      <div class="langs-badges">
+        <span class="badge">🇪🇸 Español</span>
+        <span class="badge">🇬🇧 English</span>
+        <span class="badge">🇵🇱 Polski</span>
+        <span class="badge">🇺🇦 Українська</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="aboutTitle"></h2>
+      <p data-i18n="aboutText"></p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="featuresTitle"></h2>
+      <ul class="features">
+        <li><span class="ico">📚</span><span data-i18n="feat1"></span></li>
+        <li><span class="ico">🗂️</span><span data-i18n="feat2"></span></li>
+        <li><span class="ico">🔊</span><span data-i18n="feat3"></span></li>
+        <li><span class="ico">🎮</span><span data-i18n="feat4"></span></li>
+        <li><span class="ico">🔔</span><span data-i18n="feat5"></span></li>
+      </ul>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://maxskillsup.github.io/Skills-UP-VG-privacy/" data-i18n="privacy"></a>
+        <a href="mailto:Collaborationskillsup@gmail.com" data-i18n="contact"></a>
+      </div>
+      <p>© <span id="year"></span> MaxSkillsUP</p>
+    </footer>
   </main>
+
+  <script>
+    var I18N = {
+      es: {
+        tagline: "Aprende frases en español, inglés, polaco y ucraniano",
+        getOnPlay: "Descargar en Google Play",
+        aboutTitle: "Acerca de la app",
+        aboutText: "Aprende idiomas extranjeros en línea cuando quieras. Encontrarás palabras y frases útiles para aprender español, polaco e inglés desde cero. La app contiene frases comunes para el uso diario y la comunicación, con un formato cómodo para aprender y repasar.",
+        featuresTitle: "Funciones",
+        feat1: "Frases útiles para el día a día y la comunicación",
+        feat2: "Agrupadas por categorías y niveles de dificultad",
+        feat3: "Reproducción de voz para mejorar la pronunciación",
+        feat4: "Aprende jugando y gana monedas y diamantes",
+        feat5: "Recordatorios para estudiar cada día",
+        privacy: "Política de privacidad",
+        contact: "Contacto"
+      },
+      en: {
+        tagline: "Learn Spanish, English, Polish and Ukrainian phrases",
+        getOnPlay: "Get it on Google Play",
+        aboutTitle: "About the app",
+        aboutText: "Learn foreign languages online at your convenience. Here you will find useful words and phrases for learning Spanish, Polish and English from scratch. The app contains common phrases for daily use and communication, with a convenient format for learning and repeating.",
+        featuresTitle: "Features",
+        feat1: "Useful phrases for daily use and communication",
+        feat2: "Grouped by categories and difficulty levels",
+        feat3: "Voice playback to improve pronunciation",
+        feat4: "Learn while playing and earn coins and diamonds",
+        feat5: "Daily reminders to keep studying",
+        privacy: "Privacy Policy",
+        contact: "Contact"
+      },
+      pl: {
+        tagline: "Ucz się zwrotów po hiszpańsku, angielsku, polsku i ukraińsku",
+        getOnPlay: "Pobierz z Google Play",
+        aboutTitle: "O aplikacji",
+        aboutText: "Ucz się języków obcych online, kiedy chcesz. Znajdziesz tu przydatne słowa i zwroty do nauki hiszpańskiego, polskiego i angielskiego od podstaw. Aplikacja zawiera popularne zwroty do codziennego użytku i komunikacji, w wygodnym formacie do nauki i powtórek.",
+        featuresTitle: "Funkcje",
+        feat1: "Przydatne zwroty do codziennego użytku i komunikacji",
+        feat2: "Pogrupowane według kategorii i poziomów trudności",
+        feat3: "Odtwarzanie głosu, aby poprawić wymowę",
+        feat4: "Ucz się podczas gry i zdobywaj monety oraz diamenty",
+        feat5: "Codzienne przypomnienia o nauce",
+        privacy: "Polityka prywatności",
+        contact: "Kontakt"
+      },
+      uk: {
+        tagline: "Вивчайте фрази іспанською, англійською, польською та українською",
+        getOnPlay: "Завантажити в Google Play",
+        aboutTitle: "Про додаток",
+        aboutText: "Вивчайте іноземні мови онлайн у зручний для вас час. Тут ви знайдете корисні слова та фрази для вивчення іспанської, польської та англійської з нуля. Додаток містить поширені фрази для щоденного спілкування у зручному форматі для навчання й повторення.",
+        featuresTitle: "Можливості",
+        feat1: "Корисні фрази для щоденного спілкування",
+        feat2: "Згруповані за категоріями та рівнями складності",
+        feat3: "Озвучення для покращення вимови",
+        feat4: "Навчайтеся граючи та заробляйте монети й діаманти",
+        feat5: "Щоденні нагадування про навчання",
+        privacy: "Політика конфіденційності",
+        contact: "Контакти"
+      }
+    };
+
+    function applyLang(lang) {
+      var dict = I18N[lang] || I18N.en;
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll("#langSwitch button").forEach(function (btn) {
+        btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+      });
+      try { localStorage.setItem("preferredLang", lang); } catch (e) {}
+    }
+
+    function detectLang() {
+      try {
+        var saved = localStorage.getItem("preferredLang");
+        if (saved && I18N[saved]) return saved;
+      } catch (e) {}
+      var nav = (navigator.language || navigator.userLanguage || "en").toLowerCase();
+      var code = nav.split("-")[0];
+      return I18N[code] ? code : "en";
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.querySelectorAll("#langSwitch button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        applyLang(btn.getAttribute("data-lang"));
+      });
+    });
+    applyLang(detectLang());
+  </script>
 </body>
 </html>
