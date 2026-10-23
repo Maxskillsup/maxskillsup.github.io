@@ -41,6 +41,7 @@ loopme.com, 20775, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 2896, RESELLER, 6c8d5f95897a5a3b
 loopme.com, 9621, RESELLER, 6c8d5f95897a5a3b
 lunamedia.io, 2fdb16a1-5025-4c41-9b17-e01e47ebc8b4, RESELLER, 524ecb396915caaf
+monetrix.ai, 10761, RESELLER
 media.net, 8CAXEGFDP, RESELLER
 media.net, 8CU5L226O, RESELLER
 media.net, 8CU675N41, RESELLER
